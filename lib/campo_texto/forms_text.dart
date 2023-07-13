@@ -21,6 +21,12 @@ class FormsText extends StatelessWidget {
         style: const TextStyle(fontSize: 25),
         controller: controllerEC,
         decoration: InputDecoration(
+          suffixIcon: IconButton(
+            icon: const Icon(Icons.delete),
+            onPressed: () {
+              controllerEC.text = '';
+            },
+          ),
           border: OutlineInputBorder(
             borderSide: const BorderSide(color: Colors.green),
             gapPadding: 0,

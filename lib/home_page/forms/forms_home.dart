@@ -14,8 +14,9 @@ class FormsHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Wrap(
+      crossAxisAlignment: WrapCrossAlignment.center,
+        alignment: WrapAlignment.center,
       children: [
         Padding(
           padding: const EdgeInsets.all(20.0),
