@@ -1,5 +1,4 @@
 import 'package:barcode_generator/botoes/generator_buttom.dart';
-import 'package:barcode_generator/cod_barras/generetor_widget.dart';
 import 'package:barcode_generator/home_page/cabecario/header.dart';
 import 'package:barcode_generator/home_page/forms/forms_home.dart';
 import 'package:barcode_generator/home_page/print.dart';
