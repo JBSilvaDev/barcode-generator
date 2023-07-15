@@ -19,17 +19,15 @@ class FormsHome extends StatelessWidget {
         alignment: WrapAlignment.center,
       children: [
         Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(10.0),
           child: FormsText(
             controllerEC: cod1,
             label: 'Código 1',
           ),
         ),
-        const SizedBox(
-          width: 10,
-        ),
+ 
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(10.0),
           child: FormsText(
             controllerEC: cod2,
             label: 'Código 2',

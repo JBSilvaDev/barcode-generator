@@ -8,6 +8,7 @@ import '../cod_barras/generetor_widget.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 
+
 // class Print extends StatelessWidget {
 //   final TextEditingController cod1;
 //   final TextEditingController cod2;
@@ -92,7 +93,7 @@ void printDocument(TextEditingController cod1, TextEditingController cod2,
             children: [
               pw.Padding(
                 padding: const pw.EdgeInsets.all(30.0),
-                child: GeneretorWidget(
+                child: GeneretorWidgetPrint(
                   size: size,
                   typeCod: typeCod,
                   textVisible: !isChecked,
@@ -103,7 +104,7 @@ void printDocument(TextEditingController cod1, TextEditingController cod2,
               ),
               pw.Padding(
                 padding: const pw.EdgeInsets.all(30.0),
-                child: GeneretorWidget(
+                child: GeneretorWidgetPrint(
                   size: size,
                   typeCod: typeCod,
                   textVisible: !isChecked,
