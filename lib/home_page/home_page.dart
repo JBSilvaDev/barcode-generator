@@ -1,7 +1,7 @@
 import 'package:barcode_generator/botoes/generator_buttom.dart';
 import 'package:barcode_generator/home_page/cabecario/header.dart';
 import 'package:barcode_generator/home_page/forms/forms_home.dart';
-import 'package:barcode_generator/popup.dart';
+import 'package:barcode_generator/home_page/popup.dart';
 import 'package:flutter/material.dart';
 import 'package:barcode_widget/barcode_widget.dart';
 
@@ -20,18 +20,48 @@ class _HomePageState extends State<HomePage> {
   double size = 300;
 
   @override
+  void dispose() {
+    cod1.dispose();
+    cod2.dispose();
+    super.dispose();
+  }
+
+  Widget backgroud(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
+    final orientacao = MediaQuery.of(context);
+
+    final opacity = screenWidth > 500 ? 200.0 : 400.0;
+
+    if (orientacao == 'landscape') {
+      return Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                opacity: 200,
+                image: AssetImage('assets/images/logojb.png'),
+                fit: BoxFit.fill)),
+      );
+    } else {
+      return Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                opacity: 150,
+                image: AssetImage('assets/images/logojb.png'),
+                fit: BoxFit.fill)),
+      );
+    }
+
+
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // app esta dentro da colum para nao ficar sobreposta a img de fundoi
+      // app esta dentro da colum para nao ficar sobreposta a img de fundo
       body: Stack(
         children: [
-          Container(
-            decoration: const BoxDecoration(
-                image: DecorationImage(
-                    opacity: 200,
-                    image: AssetImage('assets/images/logojb.png'),
-                    fit: BoxFit.fill)),
-          ),
+          backgroud(context),
+
           SingleChildScrollView(
             child: Column(
               children: [

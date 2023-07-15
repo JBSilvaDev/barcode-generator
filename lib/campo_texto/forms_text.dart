@@ -22,7 +22,10 @@ class FormsText extends StatelessWidget {
         controller: controllerEC,
         decoration: InputDecoration(
           suffixIcon: IconButton(
-            icon: const Icon(Icons.delete),
+            icon: const Icon(
+              Icons.delete,
+              color: Colors.red,
+            ),
             onPressed: () {
               controllerEC.text = '';
             },
@@ -33,7 +36,9 @@ class FormsText extends StatelessWidget {
             borderRadius: BorderRadius.circular(18),
           ),
           labelText: label,
-          labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
+          labelStyle: const TextStyle(
+            fontSize: 15,
+          ),
         ),
       ),
     );

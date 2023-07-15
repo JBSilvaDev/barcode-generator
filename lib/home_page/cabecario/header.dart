@@ -7,7 +7,9 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(children: [
+    return const Column(
+      
+      children: [
       SizedBox(
         height: 30,
       ),
@@ -21,7 +23,7 @@ class Header extends StatelessWidget {
       Padding(
         padding: EdgeInsets.only(bottom:8.0, right: 8, left: 8),
         child: Text(
-          'Em seguida clique em um dos botões para gerar o codigo desejado',
+          'Em seguida clique em um dos botões para gerar o código desejado',
           style: TextStyle(fontSize: 17, fontStyle: FontStyle.italic),
         ),
       ),
