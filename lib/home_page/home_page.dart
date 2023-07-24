@@ -27,13 +27,13 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget backgroud(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
 
     final orientacao = MediaQuery.of(context);
 
-    final opacity = screenWidth > 500 ? 200.0 : 400.0;
+      // print(orientacao.size.width);
+      // print(orientacao.size.height);
+    if (orientacao.size.width > orientacao.size.height) {
 
-    if (orientacao == 'landscape') {
       return Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
         decoration: const BoxDecoration(
             image: DecorationImage(
                 opacity: 150,
-                image: AssetImage('assets/images/logojb.png'),
+                image: AssetImage('assets/images/logojb2.png'),
                 fit: BoxFit.fill)),
       );
     }
